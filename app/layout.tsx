@@ -2,7 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter, JetBrains_Mono } from "next/font/google";
-
+import Script from 'next/script'
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -29,6 +29,19 @@ export default function RootLayout({
         <Navbar />
         <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>{children}</main>
         <Footer />
+
+        <Script
+  src={`https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ`}
+  strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P4ZH8EQLJQ');
+  `}
+</Script>
       </body>
     </html>
   );
