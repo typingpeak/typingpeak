@@ -2,7 +2,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Script from 'next/script'
+import Script from 'next/script';
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -21,8 +22,6 @@ export const metadata = {
   },
 }
 
-//<meta name="google-site-verification" content="18hXJObs5KZ8IUBtxnPnCOoZQ9gcSmu1MfOmnU9ad0s" />
-
 export default function RootLayout({
   children,
 }: {
@@ -35,17 +34,18 @@ export default function RootLayout({
         <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>{children}</main>
         <Footer />
 
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P4ZH8EQLJQ');
-</script>
-
-
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P4ZH8EQLJQ');
+          `}
+        </Script>
 
       </body>
     </html>
