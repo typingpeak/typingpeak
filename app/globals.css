@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0D0D0D;
+  --bg-card: #111111;
+  --bg-elevated: #141414;
+  --border: #1E1E1E;
+  --border-hover: #2A2A2A;
+  --accent: #E8A838;
+  --accent-dim: rgba(232, 168, 56, 0.08);
+  --text: #EDEDED;
+  --text-2: #999;
+  --text-3: #888;
+  --text-4: #666;
+  --text-5: #555;
+  --green: #4ADE80;
+  --red: #EF4444;
+  --red-light: #F87171;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== CURSOR BLINK ===== */
+@keyframes cursorBlink {
+
+  0%,
+  100% {
+    border-color: var(--accent);
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+.tt-cursor {
+  border-left: 2px solid var(--accent);
+  animation: cursorBlink 1s step-end infinite;
+  margin-left: -1px;
+}
+
+/* ===== PILL BUTTON ===== */
+.pill-btn {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--text-3);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.pill-btn:hover:not(:disabled) {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.pill-btn.active {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.pill-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== GHOST BUTTON ===== */
+.ghost-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-4);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.05em;
+}
+
+.ghost-btn:hover:not(:disabled) {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ghost-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== TYPING BOX ===== */
+.typing-box {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 280px;
+  cursor: text;
+  transition: border-color 0.2s;
+}
+
+.typing-box:hover {
+  border-color: var(--border-hover);
+}
+
+/* ===== INFO CARD ===== */
+.info-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.info-card:hover {
+  border-color: var(--border-hover);
+}
+
+/* ===== RESULTS GRID ===== */
+.results-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* ===== LESSON ENGINE — Character States ===== */
+.le-char {
+  position: relative;
+  transition: color 0.05s;
+}
+
+.le-char-untyped {
+  color: var(--text-5);
+}
+
+.le-char-correct {
+  color: var(--green);
+}
+
+.le-char-wrong {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.le-char-corrected {
+  color: var(--red-light);
+  opacity: 0.6;
+}
+
+/* Active character — underline + subtle blink (CSS only) */
+@keyframes activeCharPulse {
+
+  0%,
+  100% {
+    background-color: rgba(232, 168, 56, 0.15);
+  }
+
+  50% {
+    background-color: rgba(232, 168, 56, 0.04);
+  }
+}
+
+.le-char-active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2.5px;
+  text-underline-offset: 3px;
+  animation: activeCharPulse 500ms ease-in-out infinite;
+  border-radius: 2px;
+}

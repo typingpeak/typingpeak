@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingPeak | Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="6" fill="#FFB700"/>
+                <path d="M13 10V4L7 14H11V20L17 10H13Z" fill="#111111"/>
+            </svg>
+            <span>TypingPeak</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Test</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="hero">
+            <div class="badge">
+                <span class="dot"></span> Live typing test
+            </div>
+            <h1>How fast do<br><span class="accent">you really type?</span></h1>
+            <p class="subtitle">Dual-metric scoring. No inflated numbers. Your actual<br>speed, measured honestly.</p>
+        </div>
+
+        <div class="test-controls">
+            <div class="duration-selector">
+                <button>15s</button>
+                <button>30s</button>
+                <button class="active">60s</button>
+                <button>120s</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item time-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>60</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">LIVE WPM</span>
+                    <span class="stat-value">0</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">ACCURACY</span>
+                    <span class="stat-value">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-box">
+            <p class="typing-text"><span class="cursor">S</span>he wrote a long letter to her friend, describing everything that had happened over the summer. The airplane soared above the clouds and offered a breathtaking view of the landscape below. The river flowed gently through the valley, reflecting the golden light of the afternoon sun. She adjusted her glasses, leaned closer to the screen, and carefully reviewed every single word. The architect spent three years designing a building that would blend perfectly into its surroundings. The team worked late into the evening to finish the project before the early morning deadline. The cat curled up on the warm windowsill and watched the birds hopping around in the garden. He turned off his phone for an entire weekend and found that he was far more relaxed afterward.</p>
+            <div class="placeholder-overlay">Click here and start typing...</div>
+        </div>
+
+        <div class="reset-container">
+            <button class="reset-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                RESET
+            </button>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3 class="accent-title">STANDARD WPM</h3>
+                <p>(Correct chars / 5) &divide; full duration. Your stamina score &mdash; penalizes stopping early.</p>
+            </div>
+            <div class="info-card">
+                <h3 class="accent-title muted-title">LIVE WPM</h3>
+                <p>(Correct chars / 5) &divide; time elapsed. Your burst speed &mdash; updates in real time.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
