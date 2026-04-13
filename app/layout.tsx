@@ -13,11 +13,13 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-export const metadata = {
-  title: "TypingPeak",
-  description: "Free typing speed test",
-};
-
+eexport const metadata = {
+  title: 'TypingPeak',
+  description: 'Free typing speed test',
+  verification: {
+    google: '18hXJObs5KZ8IUBtxnPnCOoZQ9gcSmu1MfOmnU9ad0s',
+  },
+}
 export default function RootLayout({
   children,
 }: {
@@ -30,18 +32,18 @@ export default function RootLayout({
         <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>{children}</main>
         <Footer />
 
-        <Script
-  src={`https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ`}
-  strategy="afterInteractive"
-/>
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P4ZH8EQLJQ');
-  `}
-</Script>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P4ZH8EQLJQ');
+</script>
+
+
+
       </body>
     </html>
   );
