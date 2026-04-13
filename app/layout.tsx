@@ -13,13 +13,16 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-eexport const metadata = {
+export const metadata = {
   title: 'TypingPeak',
   description: 'Free typing speed test',
   verification: {
     google: '18hXJObs5KZ8IUBtxnPnCOoZQ9gcSmu1MfOmnU9ad0s',
   },
 }
+
+//<meta name="google-site-verification" content="18hXJObs5KZ8IUBtxnPnCOoZQ9gcSmu1MfOmnU9ad0s" />
+
 export default function RootLayout({
   children,
 }: {
