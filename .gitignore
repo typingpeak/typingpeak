@@ -47,3 +47,5 @@ Github personal token.txt
 .env*.local
 
 Doc/
+index.html
+globals.d.ts
