@@ -17,9 +17,6 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: 'TypingPeak',
   description: 'Free typing speed test',
-  verification: {
-    google: '18hXJObs5KZ8IUBtxnPnCOoZQ9gcSmu1MfOmnU9ad0s',
-  },
 }
 
 export default function RootLayout({
@@ -38,14 +35,22 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-P4ZH8EQLJQ"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-P4ZH8EQLJQ');
-          `}
-        </Script>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+  <>
+    <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      strategy="afterInteractive"
+    />
+    <Script id="google-analytics" strategy="afterInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+      `}
+    </Script>
+  </>
+)}
 
       </body>
     </html>
