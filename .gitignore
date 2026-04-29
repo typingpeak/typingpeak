@@ -45,3 +45,5 @@ Github personal token.txt
 .env
 .env.local
 .env*.local
+
+Doc/
