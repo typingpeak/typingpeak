@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 Github personal token.txt
+
+.env
+.env.local
+.env*.local
