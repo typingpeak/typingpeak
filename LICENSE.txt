@@ -1,0 +1,60 @@
+TYPINGPEAK TEMPLATE LICENSE
+============================
+
+Copyright 2026 TypingPeak
+Contact: support.typingpeak@gmail.com
+
+============================
+STANDARD LICENSE — $39
+============================
+
+By purchasing the Standard License you agree to the following terms:
+
+ALLOWED:
+✅ Use for 1 commercial or personal project
+✅ Modify the code as needed
+✅ Rebrand with your own name and branding
+✅ Deploy to your own hosting
+✅ Use for client project (1 project only)
+
+NOT ALLOWED:
+❌ Resell or redistribute the source code
+❌ Share the code with other developers
+❌ Use for more than 1 project
+❌ Sub-license or transfer to another party
+❌ Use to create a competing template product
+
+============================
+EXTENDED LICENSE — $149
+============================
+
+By purchasing the Extended License you agree to the following terms:
+
+ALLOWED:
+✅ Everything in Standard License
+✅ Use for unlimited personal projects
+✅ Use for unlimited client projects
+✅ Use in SaaS products
+✅ Use in subscription-based products
+
+NOT ALLOWED:
+❌ Resell or redistribute the source code
+❌ Share the code with other developers
+❌ Use to create a competing template product
+
+============================
+TO PURCHASE EXTENDED LICENSE
+============================
+
+Contact: support.typingpeak@gmail.com
+
+============================
+LEGAL
+============================
+
+This code is protected by copyright law.
+Violation of this license may result in legal action.
+All rights reserved.
+
+THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND.
+THE AUTHOR IS NOT LIABLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.
